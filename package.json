@@ -1,0 +1,16 @@
+{
+  "name": "dayup-local",
+  "private": true,
+  "version": "1.0.0",
+  "files": [
+    "dist/**/*.js", "dist/**/*.css", "dist/**/*.html",
+    "server.py", "start-dayup.bat", "tools/*.mjs", "tools/*.py",
+    "tests/*.cjs", "tests/*.mjs", "tests/test_*.py", "tests/visual-protected.json",
+    "tests/fixtures/empty-backup.json", "tests/fixtures/invalid-backup.json", "tests/fixtures/sample-backup.json",
+    "README.md", "PRD.md", "DEVELOPMENT.md", "LEARNING.md", "VISUAL-DESIGN.md", "PICKER-ACCEPTANCE.md", "LICENSE"
+  ],
+  "scripts": {
+    "test": "node tools/run-tests.mjs",
+    "start": "python server.py --open"
+  }
+}

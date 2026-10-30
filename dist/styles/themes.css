@@ -1,0 +1,168 @@
+/* ============================ 3. 主题皮肤 ============================== */
+
+/* ---------- 3.1 soda 已在上方定义，此处仅作锚点，便于替换成独立文件 ---------- */
+[data-theme="soda"] { }
+
+/* ---------- 3.2 prism：深色玻璃 · 渐变光 · 数据聚焦 ---------- */
+[data-theme="prism"] {
+  color-scheme: dark;
+
+  --bg-canvas: #070912;
+  --bg-canvas-2: #0B0E1C;
+  --bg-surface: rgba(255, 255, 255, .07);
+  --bg-surface-2: rgba(255, 255, 255, .11);
+  --bg-elevated: #14172A;
+  --bg-hover: rgba(255, 255, 255, .10);
+  --bg-active: rgba(255, 255, 255, .16);
+  /* 大面光晕：三团低饱和径向渐变，靠 --bg-mesh 挂到应用外壳上 */
+  --bg-mesh:
+    radial-gradient(900px 600px at 12% -10%, rgba(255, 90, 216, .22), transparent 62%),
+    radial-gradient(760px 520px at 88% 4%, rgba(79, 227, 255, .18), transparent 60%),
+    radial-gradient(680px 680px at 62% 108%, rgba(255, 200, 92, .12), transparent 62%);
+
+  --text-primary: #F4F6FF;            /* 约 17:1 */
+  --text-secondary: #C0C7E4;          /* 约 11.8:1 */
+  --text-muted: #8A93B8;              /* 约 6.5:1 */
+  --text-inverse: #070912;
+  --on-accent: #04121A;               /* 青蓝色上压深色字 */
+
+  --accent: #4FE3FF;
+  --accent-hover: #7FEBFF;
+  --accent-strong: #4FE3FF;           /* 深底上青蓝本身即高对比，无需加深 */
+  --accent-soft: rgba(79, 227, 255, .16);
+  --accent-2: #FF5AD8;
+  --accent-3: #FFC85C;
+
+  --border-subtle: rgba(255, 255, 255, .10);
+  --border-default: rgba(255, 255, 255, .16);
+  --border-strong: rgba(255, 255, 255, .30);
+  --border-w: 1px;
+
+  --state-success: #3DDC97;  --state-success-soft: rgba(61, 220, 151, .16);
+  --state-warning: #FFC85C;  --state-warning-soft: rgba(255, 200, 92, .16);
+  --state-danger: #FF6B6B;   --state-danger-soft: rgba(255, 107, 107, .16);
+  --state-info: #7AA8FF;     --state-info-soft: rgba(122, 168, 255, .16);
+
+  --cat-dev: #9B8CFF;
+  --cat-consult: #4FE3FF;
+  --cat-fitness: #FF8A5C;
+  --cat-diet: #3DDC97;
+  --cat-play: #FF5AD8;
+  --cat-life: #FFC85C;
+
+  --focus-ring-color: rgba(79, 227, 255, .60);
+  --focus-ring: 0 0 0 3px var(--focus-ring-color);
+  --scrim: rgba(4, 6, 14, .62);
+
+  --r-xs: 8px;  --r-sm: 12px;  --r-md: 16px;  --r-lg: 22px;
+  --r-xl: 28px; --r-full: 999px;
+
+  --edge-subtle:  inset 0 0 0 var(--border-w) var(--border-subtle);
+  --edge-default: inset 0 0 0 var(--border-w) var(--border-default);
+  --edge-strong:  inset 0 0 0 var(--border-w) var(--border-strong);
+
+  --shadow-1: 0 2px 10px rgba(0, 0, 0, .35);
+  --shadow-2: 0 18px 48px rgba(0, 0, 0, .55);
+  --shadow-3: 0 32px 88px rgba(0, 0, 0, .68);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .16);
+
+  --panel-filter: blur(22px) saturate(150%);
+  --surface-alpha: .07;
+
+  --font-display-weight: var(--fw-semibold);
+  --display-tracking: -0.015em;
+  --numeric-feature: "tnum" 1;
+
+  --motion-fast: 140ms;
+  --motion-base: 240ms;
+  --motion-slow: 400ms;
+  --motion-easing: var(--ease-out);
+}
+
+/* ---------- 3.3 brut：粗野 · 硬边 · 错位实心阴影 · 专注攻坚 ---------- */
+[data-theme="brut"] {
+  color-scheme: light;
+
+  --bg-canvas: #F2EFE6;              /* 纸张色，比纯白少一层冷 */
+  --bg-canvas-2: #EAE6D9;
+  --bg-surface: #FFFFFF;
+  --bg-surface-2: #FAF6EA;
+  --bg-elevated: #FFFFFF;
+  --bg-hover: #FFE94A;               /* 悬停直接换整块黄，不需要过渡 */
+  --bg-active: #FFD500;
+  --bg-mesh: none;
+
+  --text-primary: #0A0A0A;           /* 约 17:1 */
+  --text-secondary: #2B2B2B;         /* 约 13:1 */
+  --text-muted: #4A4A4A;             /* 约 8:1，粗野风不留模糊灰 */
+  --text-inverse: #F2EFE6;
+  --on-accent: #FFFFFF;              /* 电光蓝上压白字，约 5.2:1 */
+
+  --accent: #0047FF;
+  --accent-hover: #0035CC;
+  --accent-strong: #002FA8;          /* 纸底上的链接色，约 8:1 */
+  --accent-soft: #DCE4FF;
+  --accent-2: #FF3B1F;               /* 贴纸红 */
+  --accent-3: #FFE400;               /* 酸性黄 */
+
+  --border-subtle: #0A0A0A;
+  --border-default: #0A0A0A;
+  --border-strong: #0A0A0A;
+  --border-w: 3px;                   /* 结构型：粗黑描边是这套风格的骨架 */
+
+  --state-success: #00693F;  --state-success-soft: #C7F0DA;
+  --state-warning: #8A5A00;  --state-warning-soft: #FFE9A8;
+  --state-danger: #B31B0B;   --state-danger-soft: #FFD3CB;
+  --state-info: #002FA8;     --state-info-soft: #D6E0FF;
+
+  --cat-dev: #0047FF;
+  --cat-consult: #00708C;
+  --cat-fitness: #FF3B1F;
+  --cat-diet: #00A86B;
+  --cat-play: #C2009E;
+  --cat-life: #FFC400;
+
+  --focus-ring-color: #0047FF;
+  --focus-ring: 0 0 0 3px #FFFFFF, 0 0 0 6px var(--focus-ring-color);
+  --scrim: rgba(10, 10, 10, .55);
+
+  --r-xs: 0;    --r-sm: 0;     --r-md: 2px;   --r-lg: 2px;
+  --r-xl: 2px;  --r-full: 2px;               /* 圆角全部归零，胶囊变方条 */
+
+  --edge-subtle:  inset 0 0 0 var(--border-w) var(--border-subtle);
+  --edge-default: inset 0 0 0 var(--border-w) var(--border-default);
+  --edge-strong:  inset 0 0 0 var(--border-w) var(--border-strong);
+
+  --shadow-1: 4px 4px 0 #0A0A0A;
+  --shadow-2: 6px 6px 0 #0A0A0A;
+  --shadow-3: 10px 10px 0 #0A0A0A;
+  --shadow-inset: 0 0 0 transparent;
+
+  --panel-filter: none;
+  --surface-alpha: 1;
+
+  --font-display-weight: var(--fw-black);
+  --display-tracking: -0.03em;
+  --numeric-feature: "tnum" 1;
+
+  --motion-fast: 0ms;                /* 点下去就是点下去，不要渐入 */
+  --motion-base: 80ms;
+  --motion-slow: 160ms;
+  --motion-easing: steps(2, end);    /* 生硬的跳变正是这套语言的性格 */
+}
+
+/* ---- 3.4 无 backdrop-filter 时的降级：把玻璃换成更实的半透明面 ---- */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  [data-theme="prism"] {
+    --panel-filter: none;
+    --bg-surface: rgba(255, 255, 255, .12);
+    --bg-surface-2: rgba(255, 255, 255, .18);
+  }
+}
+
+
+[data-theme="prism"] { --sidebar-bg: #101323; --hero-bg: linear-gradient(120deg, #15233C, #29203B); --hero-text: #F4F6FF; --hero-muted: #C0C7E4; --hover-shadow: 0 0 22px rgba(79,227,255,.12); --nav-active: #202C41; --nav-active-text: #4FE3FF; --toast-bg: #14172A; --toast-text: #F4F6FF; }
+[data-theme="brut"] { --sidebar-bg: #EAE6D9; --hero-bg: #FFE400; --hero-text: #0A0A0A; --hero-muted: #2B2B2B; --hover-shadow: 6px 6px 0 #0A0A0A; --nav-active: #FFE94A; --nav-active-text: #0A0A0A; --toast-bg: #0A0A0A; --toast-text: #FFFFFF; }
+/* State text is deliberately darker than decorative category swatches. */
+[data-theme="soda"] { --state-success: #08685F; --state-warning: #875400; }
+[data-theme="prism"] { --text-muted: #BBC3DE; }

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "plans": [{
+    "id": "fixture-plan",
+    "title": "导入验收计划",
+    "module": "个人",
+    "date": "2026-10-28",
+    "time": "全天",
+    "priority": "高",
+    "recurrence": "不重复",
+    "reminder": "不提醒",
+    "status": "todo",
+    "isTop": true,
+    "notes": "来自测试备份"
+  }],
+  "memos": [],
+  "projects": [],
+  "devLogs": [],
+  "clients": [],
+  "consultLogs": [],
+  "fitnessPlans": [],
+  "workouts": [],
+  "meals": [],
+  "games": [],
+  "gameSessions": [],
+  "settings": { "reminders": false }
+}

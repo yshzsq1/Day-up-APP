@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="soda">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f1d32" />
+  <title>DayUp · 工作生活中枢</title>
+  <script src="./scripts/theme-init.js"></script>
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/themes.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/appearance.css" />
+  <link rel="stylesheet" href="./styles/pickers.css" />
+  <link rel="stylesheet" href="./styles/learning.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">D</span><div><strong>DayUp</strong><small>你的工作生活中枢</small></div></div>
+      <nav class="main-nav" aria-label="主导航">
+        <div class="nav-group"><small>总览</small><button class="nav-item active" data-view="overview"><span>⌂</span>首页总览</button><button class="nav-item" data-view="plans"><span>✓</span>今日计划</button></div>
+        <div class="nav-group"><small>工作</small><button class="nav-item" data-view="development"><span>⌘</span>开发工作</button><button class="nav-item" data-view="consulting"><span>◎</span>咨询工作</button></div>
+        <div class="nav-group"><small>成长</small><button class="nav-item" data-view="learning"><span>▤</span>学习空间</button></div>
+        <div class="nav-group"><small>生活</small><button class="nav-item" data-view="fitness"><span>◒</span>健身计划</button><button class="nav-item" data-view="diet"><span>◍</span>饮食计划</button><button class="nav-item" data-view="games"><span>◇</span>游戏娱乐</button></div>
+      </nav>
+      <div class="sidebar-bottom"><div class="nav-group"><small>系统</small><button class="nav-item" data-view="settings"><span>⚙</span>数据与设置</button></div>
+        <div class="theme-control"><small>外观 · Ctrl / ⌘ + Shift + T</small><div class="theme-pills" role="group" aria-label="外观主题">
+          <button type="button" data-theme-choice="soda" aria-label="切换到马卡龙主题">马卡龙</button><button type="button" data-theme-choice="prism" aria-label="切换到玻璃主题">玻璃</button><button type="button" data-theme-choice="brut" aria-label="切换到硬边主题">硬边</button>
+        </div><p class="theme-current">当前：<span data-theme-label="soda">马卡龙</span><span data-theme-label="prism">玻璃</span><span data-theme-label="brut">硬边</span></p></div>
+        <p>本地运行 · 数据只在这台电脑</p></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow" id="header-date"></p><h1 id="page-title">首页总览</h1></div><div class="top-actions"><button class="icon-button" id="quick-add" title="快速添加">＋</button><div class="avatar">我</div></div></header>
+      <section class="card appearance-panel" aria-label="外观设置">
+        <div class="section-heading"><div><h2>外观</h2><p>选择适合此刻的界面风格，自动保存在这台电脑。</p></div></div>
+        <div class="theme-previews" role="group" aria-label="主题预览">
+          <button type="button" class="theme-preview" data-theme="soda" data-theme-choice="soda" aria-label="使用马卡龙主题"><span class="preview-layout"><span class="preview-rail"></span><span class="preview-content"><span class="preview-top">今日驾驶舱</span><span class="preview-task">✓ 今天最重要的事</span><span class="preview-progress"></span></span></span><strong>马卡龙 · SODA</strong><small>奶油底色，柔和圆角</small></button>
+          <button type="button" class="theme-preview" data-theme="prism" data-theme-choice="prism" aria-label="使用玻璃主题"><span class="preview-layout"><span class="preview-rail"></span><span class="preview-content"><span class="preview-top">今日驾驶舱</span><span class="preview-task">✓ 今天最重要的事</span><span class="preview-progress"></span></span></span><strong>玻璃 · PRISM</strong><small>深色光晕，清晰层次</small></button>
+          <button type="button" class="theme-preview" data-theme="brut" data-theme-choice="brut" aria-label="使用硬边主题"><span class="preview-layout"><span class="preview-rail"></span><span class="preview-content"><span class="preview-top">今日驾驶舱</span><span class="preview-task">✓ 今天最重要的事</span><span class="preview-progress"></span></span></span><strong>硬边 · BRUT</strong><small>高对比描边，利落方角</small></button>
+        </div>
+        <p class="theme-current">当前：<span data-theme-label="soda">马卡龙</span><span data-theme-label="prism">玻璃</span><span data-theme-label="brut">硬边</span></p>
+        <p><a class="link-button" href="./styleguide.html" target="_blank" rel="noopener">查看样式参考 →</a></p>
+      </section>
+      <div id="app"><div class="empty" role="status">正在读取本地数据……</div></div>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="./learning-core.js"></script>
+  <script src="./core.js"></script>
+  <script src="./storage.js"></script>
+  <script src="./backup.js"></script>
+  <script src="./features.js"></script>
+  <script src="./learning.js"></script>
+  <script src="./app.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/pickers.js"></script>
+</body>
+</html>

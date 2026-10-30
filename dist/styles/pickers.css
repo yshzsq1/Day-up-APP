@@ -1,0 +1,37 @@
+/* Small top-layer controls use the same surface, shape and focus tokens as the app. */
+.native-date { display:none; }
+.picker-panel { position:fixed; inset:auto; margin:0; width:min(304px,calc(100vw - 24px)); max-height:calc(100dvh - 24px); overflow:auto; padding:var(--sp-3); border:0; border-radius:var(--r-lg); box-shadow:var(--edge-default),var(--shadow-3); background:var(--bg-elevated); color:var(--text-primary); z-index:var(--z-tooltip); font-size:var(--fs-sm); line-height:var(--lh-snug); }
+.picker-panel::backdrop { background:var(--clear); }
+.picker-panel button { min-width:0; min-height:32px; border-radius:var(--r-xs); background:var(--clear); color:var(--text-primary); font-size:var(--fs-sm); font-weight:var(--fw-medium); padding:var(--sp-1); }
+.picker-panel button:hover { background:var(--bg-hover); }
+.picker-panel button:focus-visible,.picker-panel input:focus-visible { outline:2px solid var(--focus-ring-color); outline-offset:-2px; }
+.picker-heading { display:grid; grid-template-columns:32px 1fr 32px; gap:var(--sp-1); align-items:center; margin-bottom:var(--sp-2); }
+.picker-heading .picker-title { font-weight:var(--fw-bold); }
+.picker-title span { color:var(--text-muted); margin-left:var(--sp-1); }
+.picker-week,.picker-days { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:var(--sp-1); }
+.picker-days { grid-auto-rows:32px; }
+.picker-week { color:var(--text-muted); text-align:center; font-size:var(--fs-xs); padding:var(--sp-1) 0; }
+.picker-days .picker-day { height:32px; font-variant-numeric:tabular-nums; }
+.picker-panel [aria-current="date"] { box-shadow:var(--edge-strong); color:var(--accent-strong); font-weight:var(--fw-bold); }
+.picker-panel [aria-pressed="true"],.picker-panel [aria-pressed="true"]:hover,.picker-months [aria-current="true"],.picker-months [aria-current="true"]:hover { background:var(--accent); color:var(--on-accent); }
+.picker-footer { display:flex; justify-content:space-between; align-items:center; gap:var(--sp-2); margin-top:var(--sp-2); padding-top:var(--sp-2); border-top:1px solid var(--border-subtle); }
+.picker-footer button { color:var(--accent-strong); padding:var(--sp-1) var(--sp-2); }
+.picker-hint { font-size:var(--fs-xs); color:var(--text-muted); }
+.picker-year { display:flex; align-items:center; gap:var(--sp-3); margin:var(--sp-3) 0; }
+.picker-year input { width:100%; min-width:0; padding:var(--sp-2); background:var(--bg-surface-2); color:var(--text-primary); border:0; border-radius:var(--r-xs); box-shadow:var(--edge-default); font:inherit; }
+.picker-months { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-2); padding-bottom:var(--sp-3); }
+.calendar-trigger[aria-expanded="true"] { color:var(--accent-strong); box-shadow:var(--edge-strong); }
+.time-trigger { text-align:left; display:flex; align-items:center; justify-content:space-between; cursor:pointer; }
+.time-trigger::after { content:"⌄"; color:var(--text-muted); margin-left:var(--sp-2); }
+.time-heading { display:flex; justify-content:space-between; align-items:center; gap:var(--sp-2); margin-bottom:var(--sp-2); }
+.time-heading strong { font-size:var(--fs-sm); font-weight:var(--fw-bold); }
+.time-heading>button { width:32px; }
+.time-readout { color:var(--accent-strong); font-size:var(--fs-lg); margin-left:var(--sp-2); font-variant-numeric:tabular-nums; }
+.time-special { display:flex; gap:var(--sp-2); margin-bottom:var(--sp-3); }
+.time-special button { flex:1; box-shadow:var(--edge-subtle); }
+.time-sections { display:grid; grid-template-columns:1.2fr 1fr; gap:var(--sp-3); }
+.time-sections h3 { color:var(--text-muted); font-size:var(--fs-xs); margin:0 0 var(--sp-2); font-weight:var(--fw-medium); }
+.time-hours,.time-minutes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--sp-1); }
+.time-minutes { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.time-hours button,.time-minutes button { min-height:28px; height:28px; padding:0; font-variant-numeric:tabular-nums; }
+.picker-footer .picker-apply { background:var(--accent); color:var(--on-accent); min-width:64px; }
